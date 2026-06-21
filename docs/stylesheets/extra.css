@@ -1,0 +1,8 @@
+/* Field-readability tweaks: larger body text, high contrast */
+:root { --md-text-font: "Roboto"; }
+.md-typeset { font-size: .82rem; line-height: 1.7; }
+.md-typeset h1 { font-weight: 700; }
+/* make the "Last updated" stamp obvious */
+.md-source-file { font-size: .7rem; }
+/* SWMS callout = use the danger admonition, tinted strongly */
+.md-typeset .admonition.danger { border-left-width: 5px; }

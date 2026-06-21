@@ -1,0 +1,90 @@
+site_name: Precision Ag — Field SOPs
+site_description: Field standard operating procedures for Precision Ag
+site_author: Precision Ag
+# IMPORTANT: set this to your Cloudflare Pages URL once deployed
+site_url: https://field-sops.pages.dev/
+copyright: Internal use only — Precision Ag
+
+theme:
+  name: material
+  palette:
+    # light mode (best for sunlight readability in the field)
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs          # books appear as tabs across the top
+    - navigation.tabs.sticky
+    - navigation.sections      # chapters grouped in the left sidebar
+    - navigation.top           # back-to-top button
+    - navigation.indexes       # a book's index.md is its overview page
+    - navigation.tracking
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+      fallback_to_build_date: true   # won't crash if git history is missing
+
+markdown_extensions:
+  - admonition                 # SWMS / Warning / Note / Tip callout boxes
+  - pymdownx.details           # collapsible callouts
+  - pymdownx.superfences       # code/diagram blocks
+  - pymdownx.tasklist:         # interactive checklists
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+extra:
+  manual_version: "0.1 DRAFT"   # bump this when you cut a reviewed release
+
+# ---------------------------------------------------------------------------
+# NAV — this is the table of contents. Each top-level item is a "book".
+# To add a chapter: create the .md file, then add a line under its book here.
+# ---------------------------------------------------------------------------
+nav:
+  - Home: index.md
+  - Surveying:
+      - surveying/index.md
+      - Introduction: surveying/00-introduction.md
+      - Equipment Needed: surveying/01-equipment-needed.md
+      - Equipment Setup (Polaris): surveying/02-setup-polaris.md
+      - Equipment Setup (Ute): surveying/03-setup-ute.md
+      - Survey Setup (Electronic): surveying/04-survey-setup.md
+      - Exporting: surveying/05-exporting.md
+      - Troubleshooting: surveying/06-troubleshooting.md
+      - Support: surveying/07-support.md
+  - Grid Sampling:
+      - grid/index.md
+  - Carbon:
+      - carbon/index.md
+  - Gamma:
+      - gamma/index.md

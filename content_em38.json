@@ -1,0 +1,313 @@
+{
+  "org": "Precision Ag",
+  "title": "Surveying with EM38 + Dual EMS",
+  "subtitle": "Electromagnetic induction soil survey — field SOP",
+  "author": "Precision Ag",
+  "owner": "Document owner: Brandon Miller, Digital Analyst",
+  "version": "0.1 DRAFT",
+  "updated": "21 Jun 2026",
+  "chapters": [
+    {
+      "key": "ch_intro",
+      "label": "Introduction",
+      "color": "#475569",
+      "tag": "What this survey is, when to use it, how to read this manual",
+      "overview": "This manual is the field reference for running an EM38 + Dual EMS electromagnetic induction survey end to end \u2014 from loading the rig to handing off clean, exported data. Use it on the job: every chapter opens with a quick overview, then the detailed steps.",
+      "at_a_glance": "EM induction measures apparent soil electrical conductivity (ECa), which we use as a proxy for texture, moisture and salinity variation across a paddock. Higher quality in = higher quality maps out.",
+      "blocks": [
+        {"type": "heading", "text": "How to use this manual", "anchor": "intro_how"},
+        {"type": "bullets", "items": [
+          "Tabs run down the left edge \u2014 tap any chapter to jump straight to it.",
+          "HOME (top-left) returns to the cover; CONTENTS (top-right) returns to the chapter index.",
+          "Every chapter starts with an overview so you can orient before diving in.",
+          "Use your PDF reader's search (magnifying glass) to find any term, part number or error message."
+        ]},
+        {"type": "callout", "kind": "tip", "title": "FIRST TIME?",
+         "text": "Read Introduction \u2192 Equipment Needed \u2192 the setup chapter for your vehicle in full before your first solo survey. After that, the Equipment Needed checklist and Troubleshooting table are the pages you'll actually live in."},
+        {"type": "heading", "text": "Before you go", "anchor": "intro_before"},
+        {"type": "checklist", "items": [
+          "Job confirmed in [CONFIRM: Salesforce / scheduling system] and paddock boundary loaded",
+          "Weather and ground conditions suitable (see Survey Setup)",
+          "Vehicle for this job confirmed (Polaris or Ute)",
+          "All gear from the Equipment Needed checklist packed and powered",
+          "Landholder access / gate / biosecurity requirements noted"
+        ]},
+        {"type": "callout", "kind": "warning", "title": "VERSION CHECK",
+         "text": "Field procedures change as firmware and software update. Check the footer of this page \u2014 if the version on your device is older than the one published on [CONFIRM: SharePoint / docs site], grab the latest before heading out."}
+      ]
+    },
+    {
+      "key": "ch_equip",
+      "label": "Equipment Needed",
+      "color": "#2563eb",
+      "tag": "The full kit list \u2014 print this and pack against it",
+      "overview": "Everything required to run an EM38 + Dual EMS survey. Treat the checklist as a pre-departure pack list: don't leave the depot until every box is ticked.",
+      "at_a_glance": "Missing one cable can cost a whole day of travel. Pack against the checklist, not from memory.",
+      "blocks": [
+        {"type": "heading", "text": "Core sensor kit", "anchor": "equip_core"},
+        {"type": "checklist", "items": [
+          "EM38 sensor unit [CONFIRM: model \u2014 e.g. EM38-MK2]",
+          "Dual EMS [CONFIRM: exact unit / second sensor description]",
+          "Sensor data / power cables [CONFIRM: which cables, qty]",
+          "Logging device / data logger [CONFIRM: device + charged]",
+          "GNSS / GPS receiver + antenna [CONFIRM: model]",
+          "Calibration gear [CONFIRM: nulling stand / spacers]"
+        ]},
+        {"type": "image", "caption": "Photo: the complete sensor kit laid out and labelled. [ADD PHOTO]"},
+        {"type": "heading", "text": "Power & cabling", "anchor": "equip_power"},
+        {"type": "checklist", "items": [
+          "Batteries (primary) + spare, fully charged",
+          "Battery charger + vehicle charging lead",
+          "All data cables (sensor \u2192 logger \u2192 GPS) [CONFIRM exact set]",
+          "Spare fuses / connectors [CONFIRM]"
+        ]},
+        {"type": "heading", "text": "Mounting hardware", "anchor": "equip_mount"},
+        {"type": "para", "text": "Mounting differs by vehicle \u2014 see the relevant setup chapter. Common to both:"},
+        {"type": "checklist", "items": [
+          "Sled / cart / mount frame [CONFIRM]",
+          "Straps, pins, fasteners [CONFIRM]",
+          "Tow hardware [CONFIRM]"
+        ]},
+        {"type": "heading", "text": "Field support & PPE", "anchor": "equip_ppe"},
+        {"type": "checklist", "items": [
+          "This manual (offline on device) + paddock map",
+          "Hi-vis, sun protection, water, first aid kit",
+          "Tool kit / multi-tool, cable ties, gaffer tape",
+          "Phone / comms with depot, fuel for vehicle",
+          "Spare logging media / [CONFIRM: SD card, etc.]"
+        ]},
+        {"type": "table", "header": ["Item", "Qty", "Critical?", "Notes"],
+         "rows": [
+           ["EM38 sensor", "1", "Yes", "[CONFIRM]"],
+           ["Dual EMS", "1", "Yes", "[CONFIRM]"],
+           ["Data logger", "1", "Yes", "Charged night before"],
+           ["GNSS receiver", "1", "Yes", "[CONFIRM correction source]"],
+           ["Spare battery", "1+", "Yes", "Full survey day capacity"],
+           ["Cable set", "1", "Yes", "Pack the spare too"]
+         ],
+         "widths": [200, 40, 60, 191]}
+      ]
+    },
+    {
+      "key": "ch_polaris",
+      "label": "Equipment Setup (Polaris)",
+      "color": "#0891b2",
+      "tag": "Mounting & wiring the rig on the Polaris",
+      "overview": "How to mount, wire and balance the EM38 + Dual EMS on the Polaris for clean data and a safe tow. Follow the order \u2014 mechanical mount first, then power, then data, then a function check.",
+      "at_a_glance": "The Polaris is for [CONFIRM: terrain / paddock conditions where it's preferred]. Keep the sensor clear of metal and engine interference.",
+      "blocks": [
+        {"type": "callout", "kind": "safety", "title": "SAFETY FIRST",
+         "text": "Engine off and park brake on before mounting anything. Watch pinch points on the tow frame. Confirm the load is secure before moving off \u2014 a sensor coming loose at speed is a serious hazard."},
+        {"type": "heading", "text": "1. Mechanical mount", "anchor": "pol_mount"},
+        {"type": "steps", "items": [
+          "[CONFIRM: where the mount attaches to the Polaris]",
+          "[CONFIRM: how the sensor sled/frame fixes to the mount]",
+          "[CONFIRM: required height / ground clearance of the sensor]",
+          "Confirm clearance from metal and the engine to avoid interference."
+        ]},
+        {"type": "image", "caption": "Photo: EM38 mounted on the Polaris, correct height shown. [ADD PHOTO]"},
+        {"type": "heading", "text": "2. Power connection", "anchor": "pol_power"},
+        {"type": "steps", "items": [
+          "[CONFIRM: power source \u2014 own battery vs vehicle]",
+          "[CONFIRM: connector order and polarity]",
+          "Verify the sensor and logger both power up."
+        ]},
+        {"type": "heading", "text": "3. Data connection", "anchor": "pol_data"},
+        {"type": "steps", "items": [
+          "[CONFIRM: sensor \u2192 logger cable]",
+          "[CONFIRM: GNSS \u2192 logger cable]",
+          "Confirm the logger sees both the sensor and a GPS fix."
+        ]},
+        {"type": "heading", "text": "4. Pre-move function check", "anchor": "pol_check"},
+        {"type": "checklist", "items": [
+          "Sensor reading and not erroring",
+          "GPS fix acquired [CONFIRM: required fix quality]",
+          "Logging starts/stops correctly",
+          "Load mechanically secure for tow"
+        ]},
+        {"type": "callout", "kind": "note", "title": "INTERFERENCE",
+         "text": "EM sensors are sensitive to nearby metal and electrical noise. If readings look wrong, re-check the sensor's distance from the vehicle frame before anything else."}
+      ]
+    },
+    {
+      "key": "ch_ute",
+      "label": "Equipment Setup (Ute)",
+      "color": "#7c3aed",
+      "tag": "Mounting & wiring the rig on the Ute",
+      "overview": "How to mount, wire and balance the EM38 + Dual EMS for towing behind the Ute. Same logic as the Polaris \u2014 mechanical, power, data, check \u2014 but the mount and clearances differ.",
+      "at_a_glance": "The Ute is for [CONFIRM: larger paddocks / road travel between sites]. Mind the longer tow length on turns and gates.",
+      "blocks": [
+        {"type": "callout", "kind": "safety", "title": "SAFETY FIRST",
+         "text": "Confirm the tow hitch and any safety chains are rated and secured before moving. Check the sensor sled tracks correctly behind the Ute and won't fishtail or strike obstacles."},
+        {"type": "heading", "text": "1. Mechanical mount / tow", "anchor": "ute_mount"},
+        {"type": "steps", "items": [
+          "[CONFIRM: hitch type and attachment]",
+          "[CONFIRM: sled/cart coupling and safety chains]",
+          "[CONFIRM: sensor height / ground clearance]",
+          "Confirm tracking and clearance at full turn."
+        ]},
+        {"type": "image", "caption": "Photo: sensor sled hitched behind the Ute. [ADD PHOTO]"},
+        {"type": "heading", "text": "2. Power connection", "anchor": "ute_power"},
+        {"type": "steps", "items": [
+          "[CONFIRM: power source and routing]",
+          "[CONFIRM: connector order and polarity]",
+          "Verify sensor and logger power up."
+        ]},
+        {"type": "heading", "text": "3. Data connection", "anchor": "ute_data"},
+        {"type": "steps", "items": [
+          "[CONFIRM: sensor \u2192 logger cable]",
+          "[CONFIRM: GNSS \u2192 logger cable]",
+          "Confirm logger sees sensor + GPS fix."
+        ]},
+        {"type": "heading", "text": "4. Pre-move function check", "anchor": "ute_check"},
+        {"type": "checklist", "items": [
+          "Sensor reading and not erroring",
+          "GPS fix acquired [CONFIRM: required fix quality]",
+          "Logging starts/stops correctly",
+          "Tow secure, chains on, sled tracking true"
+        ]}
+      ]
+    },
+    {
+      "key": "ch_survey",
+      "label": "Survey Setup (Electronic)",
+      "color": "#db2777",
+      "tag": "Software, logging config, calibration & line plan",
+      "overview": "Configuring the logging software and sensor for the job: project setup, calibration/nulling, line spacing and the in-field logging routine. This is where data quality is won or lost.",
+      "at_a_glance": "Garbage in stays garbage \u2014 calibrate properly and keep line spacing/speed consistent.",
+      "blocks": [
+        {"type": "heading", "text": "1. Create the project / job", "anchor": "sur_project"},
+        {"type": "steps", "items": [
+          "Open [CONFIRM: logging software name]",
+          "[CONFIRM: create new job, naming convention]",
+          "[CONFIRM: load paddock boundary / guidance lines]",
+          "[CONFIRM: set coordinate system / datum]"
+        ]},
+        {"type": "callout", "kind": "warning", "title": "NAMING CONVENTION",
+         "text": "Use the standard job naming format [CONFIRM exact format] every time. Consistent names are what make exporting and back-office processing painless later."},
+        {"type": "heading", "text": "2. Calibration / nulling", "anchor": "sur_cal"},
+        {"type": "steps", "items": [
+          "[CONFIRM: calibration procedure for EM38]",
+          "[CONFIRM: calibration for Dual EMS]",
+          "[CONFIRM: how to verify calibration passed]"
+        ]},
+        {"type": "image", "caption": "Photo/screenshot: calibration screen with a good result. [ADD]"},
+        {"type": "heading", "text": "3. Survey parameters", "anchor": "sur_params"},
+        {"type": "table", "header": ["Parameter", "Setting", "Notes"],
+         "rows": [
+           ["Line spacing", "[CONFIRM]", "Per job spec"],
+           ["Logging rate", "[CONFIRM]", ""],
+           ["Travel speed", "[CONFIRM]", "Keep consistent"],
+           ["GPS fix required", "[CONFIRM]", "Don't log without it"]
+         ],
+         "widths": [150, 150, 191]},
+        {"type": "heading", "text": "4. In-field logging routine", "anchor": "sur_run"},
+        {"type": "steps", "items": [
+          "Confirm GPS fix and live sensor reading before the first line.",
+          "Start logging at the line start; keep speed steady.",
+          "Maintain line spacing using guidance.",
+          "Watch the live data for dropouts or spikes.",
+          "Stop logging cleanly at the end of each line / the job."
+        ]},
+        {"type": "callout", "kind": "tip", "title": "WATCH THE LIVE DATA",
+         "text": "Glance at the live trace regularly. Catching a dropout or a flat-lining sensor in the paddock costs minutes; catching it back at the office costs a return trip."}
+      ]
+    },
+    {
+      "key": "ch_export",
+      "label": "Exporting",
+      "color": "#ea580c",
+      "tag": "Getting clean data off the device and to the office",
+      "overview": "How to close out the job, export the data in the correct format, and get it to the back office reliably. Do this before you leave the paddock where possible.",
+      "at_a_glance": "Export and verify on-site. A file you can't open is only a problem if you find out tomorrow.",
+      "blocks": [
+        {"type": "heading", "text": "1. Close the job", "anchor": "exp_close"},
+        {"type": "steps", "items": [
+          "Stop logging and save / close the job in [CONFIRM software].",
+          "[CONFIRM: any end-of-job checks the software prompts]"
+        ]},
+        {"type": "heading", "text": "2. Export", "anchor": "exp_export"},
+        {"type": "steps", "items": [
+          "[CONFIRM: export menu / steps]",
+          "[CONFIRM: required file format \u2014 e.g. CSV / proprietary]",
+          "[CONFIRM: file naming to match the job convention]"
+        ]},
+        {"type": "heading", "text": "3. Verify", "anchor": "exp_verify"},
+        {"type": "checklist", "items": [
+          "File opens and has the expected number of points",
+          "GPS coordinates present and sensible",
+          "No obvious gaps across the paddock",
+          "Filename matches the convention"
+        ]},
+        {"type": "heading", "text": "4. Transfer to office", "anchor": "exp_transfer"},
+        {"type": "steps", "items": [
+          "[CONFIRM: upload method \u2014 e.g. SharePoint / cloud / sync]",
+          "[CONFIRM: where the file goes / which folder]",
+          "[CONFIRM: who to notify that the job is in]"
+        ]},
+        {"type": "callout", "kind": "warning", "title": "DON'T WIPE TOO EARLY",
+         "text": "Keep the raw data on the device until you've confirmed it's safely received at the office. [CONFIRM your retention rule.]"}
+      ]
+    },
+    {
+      "key": "ch_trouble",
+      "label": "Troubleshooting",
+      "color": "#b91c1c",
+      "tag": "Symptom \u2192 likely cause \u2192 fix",
+      "overview": "Fast field fixes for the most common problems. Find the symptom, work the likely causes top to bottom. If none resolve it, go to Support.",
+      "at_a_glance": "Work the table top-down \u2014 causes are ordered most-likely first.",
+      "blocks": [
+        {"type": "heading", "text": "Common faults", "anchor": "tr_table"},
+        {"type": "table", "header": ["Symptom", "Likely cause", "Fix"],
+         "rows": [
+           ["No power to sensor/logger", "Battery flat / loose connector", "Check battery charge, reseat power connectors, try spare battery"],
+           ["No GPS fix", "Antenna obstructed / no correction", "Clear sky view, check antenna cable, [CONFIRM correction source]"],
+           ["Sensor reads zero / flatline", "Cable fault / sensor not initialised", "Reseat data cable, power-cycle sensor, recalibrate"],
+           ["Erratic / spiky readings", "Metal interference / loose mount", "Increase distance from metal, check mount is tight"],
+           ["Logger not recording", "Logging not started / storage full", "Confirm logging is active, check free storage"],
+           ["Data won't export", "Job not closed / format wrong", "Close job first, re-check export format/steps"]
+         ],
+         "widths": [120, 140, 231]},
+        {"type": "callout", "kind": "note", "title": "BEFORE YOU CALL",
+         "text": "Note the exact error message, what you were doing when it happened, and which steps from this table you've already tried. It makes support five times faster."},
+        {"type": "heading", "text": "Field reset sequence", "anchor": "tr_reset"},
+        {"type": "steps", "items": [
+          "Stop logging and save what you have.",
+          "Power-cycle the logger, then the sensor.",
+          "Re-confirm power, data and GPS connections.",
+          "Recalibrate and run a short test line.",
+          "If still faulty, stop and contact Support."
+        ]}
+      ]
+    },
+    {
+      "key": "ch_support",
+      "label": "Support",
+      "color": "#15803d",
+      "tag": "Who to call, escalation, and reporting issues",
+      "overview": "Where to get help when the field fixes run out, and how to feed problems and improvements back so this manual keeps getting better.",
+      "at_a_glance": "Stuck after Troubleshooting? Don't burn the day guessing \u2014 escalate.",
+      "blocks": [
+        {"type": "heading", "text": "Contacts", "anchor": "sup_contacts"},
+        {"type": "table", "header": ["For", "Contact", "Details"],
+         "rows": [
+           ["Field / operational help", "[CONFIRM name]", "[phone] / [hours]"],
+           ["Technical / data issues", "[CONFIRM name]", "[phone / email]"],
+           ["Equipment / hardware", "[CONFIRM name]", "[phone / email]"],
+           ["After hours / urgent", "[CONFIRM]", "[phone]"]
+         ],
+         "widths": [160, 130, 201]},
+        {"type": "heading", "text": "Escalation path", "anchor": "sup_escalate"},
+        {"type": "steps", "items": [
+          "Work the Troubleshooting table.",
+          "Call field/operational support with your notes.",
+          "If unresolved, escalate to technical support.",
+          "Log the issue [CONFIRM: where, e.g. ClickUp / form]."
+        ]},
+        {"type": "callout", "kind": "tip", "title": "IMPROVE THIS MANUAL",
+         "text": "Found a step that's wrong, missing or unclear? Report it via [CONFIRM: feedback form / QR code]. Real field feedback is what turns this draft into the version everyone trusts."},
+        {"type": "image", "caption": "QR code to the feedback form / latest version. [ADD QR]"}
+      ]
+    }
+  ]
+}
