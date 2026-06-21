@@ -8,7 +8,7 @@ Pick a manual below, or use the search box (top right) to jump straight to any s
 
     ---
 
-    DualEM + T3RRA soil survey on the Getac, start to finish.
+    DualEM + T3RRA soil survey on the Getac: kit, rig setup, running the survey, and export.
 
     [:octicons-arrow-right-24: Open manual](surveying/index.md)
 

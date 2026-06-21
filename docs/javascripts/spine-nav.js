@@ -17,6 +17,9 @@
       var href = a.getAttribute('href') || '';
       var m = href.match(/\/(\d{2})-[^\/]*\/?$/);
       if (m) {
+        // genuine chapter link: tag it so the CSS shows the icon-tab + number,
+        // and gates the white "active tab" to these only (no blob on Home/stubs).
+        a.classList.add('pag-spine-tab');
         var span = document.createElement('span');
         span.className = 'pag-num';
         span.textContent = m[1];
@@ -24,6 +27,9 @@
       }
       a.dataset.tipDone = '1';
     });
+    // flag pages with no chapters so the CSS can hide the empty spine rail
+    var hasChapters = document.querySelector('.md-nav--primary .pag-spine-tab');
+    document.body.classList.toggle('pag-no-chapters', !hasChapters);
   }
   if (document.readyState !== 'loading') decorate();
   else document.addEventListener('DOMContentLoaded', decorate);

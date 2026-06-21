@@ -5,13 +5,28 @@ Runs as part of `mkdocs build`, so it stays correct on every Cloudflare deploy."
 
 import os
 import json
+import time
 
 CACHE_EXTS = ('.html', '.png', '.jpg', '.jpeg', '.svg', '.css', '.js',
               '.woff2', '.woff', '.json')
 
 
+def _stamp_build_id(site_dir):
+    """Replace __BUILD_ID__ in sw.js with a fresh value so the service-worker
+    cache key rotates on every deploy (old caches get purged on activate)."""
+    sw = os.path.join(site_dir, 'sw.js')
+    if not os.path.exists(sw):
+        return
+    with open(sw, 'r', encoding='utf-8') as fh:
+        text = fh.read()
+    if '__BUILD_ID__' in text:
+        with open(sw, 'w', encoding='utf-8') as fh:
+            fh.write(text.replace('__BUILD_ID__', str(int(time.time()))))
+
+
 def on_post_build(config, **kwargs):
     site_dir = config['site_dir']
+    _stamp_build_id(site_dir)
     urls = set()
     for root, _dirs, files in os.walk(site_dir):
         for f in files:

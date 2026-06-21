@@ -8,7 +8,17 @@
    (res.type === 'basic' && !res.redirected), so the login page can never poison
    the offline cache. */
 
-const CACHE = 'pag-sops-v1';
+// __BUILD_ID__ is replaced with a fresh value on every build (see
+// hooks/offline_manifest.py) so the cache key rotates each deploy and the
+// activate handler purges stale caches — otherwise old content persists.
+const CACHE = 'pag-sops-__BUILD_ID__';
+
+// let the client read the active cache name (offline-button uses this)
+self.addEventListener('message', e => {
+  if (e.data && e.data.type === 'GET_CACHE_NAME' && e.source) {
+    e.source.postMessage({ type: 'CACHE_NAME', name: CACHE });
+  }
+});
 
 const PRECACHE = ['/', '/index.html', '/404.html'];
 

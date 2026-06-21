@@ -24,11 +24,29 @@
     return [...new Set([...urls, ...links, ...assets, location.href])];
   }
 
-  function getCacheStatus(cb) {
+  // Find the active versioned cache (name rotates per deploy: pag-sops-<id>).
+  async function openSopCache() {
+    const names = await caches.keys();
+    const name = names.find(n => n.indexOf('pag-sops-') === 0);
+    return name ? caches.open(name) : null;
+  }
+
+  // "Offline ready" only when (almost) the whole manifest is cached — not after
+  // merely browsing a few pages.
+  async function getCacheStatus(cb) {
     if (!('caches' in window)) return cb('unavailable');
-    caches.open('pag-sops-v1').then(cache => {
-      cache.keys().then(keys => cb(keys.length > 5 ? 'cached' : 'uncached'));
-    });
+    try {
+      const cache = await openSopCache();
+      if (!cache) return cb('uncached');
+      const r = await fetch(new URL('/offline-manifest.json', location.origin), {
+        credentials: 'same-origin'
+      });
+      const wanted = r.ok ? (await r.json()).map(u => new URL(u, location.origin).href) : [];
+      if (!wanted.length) return cb('uncached');
+      const have = new Set((await cache.keys()).map(req => req.url));
+      const covered = wanted.filter(u => have.has(u)).length / wanted.length;
+      cb(covered >= 0.95 ? 'cached' : 'uncached');
+    } catch (_) { cb('uncached'); }
   }
 
   function createButton() {
@@ -36,6 +54,7 @@
     btn.id = 'pag-offline-btn';
     btn.setAttribute('aria-label', 'Download for offline use');
     btn.setAttribute('title', 'Download for offline use');
+    btn.setAttribute('aria-live', 'polite');
     btn.style.cssText = [
       'background:none',
       'border:1.5px solid rgba(255,255,255,0.3)',
@@ -61,6 +80,9 @@
         unavailable: ''
       };
       btn.textContent = icons[state] || '';
+      const labels = { uncached: 'Save offline', downloading: 'Saving',
+                       cached: 'Offline ready', unavailable: 'Offline not available' };
+      btn.setAttribute('aria-label', labels[state] || 'Download for offline use');
       btn.style.borderColor = state === 'cached'
         ? 'rgba(143,183,62,0.7)'
         : state === 'downloading'
