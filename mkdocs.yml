@@ -1,4 +1,4 @@
-site_name: Precision Ag — Field SOPs
+site_name: Field SOPs
 site_description: Field standard operating procedures for Precision Ag
 site_author: Precision Ag
 site_url: https://precision-ag-field-sops.pages.dev/
@@ -11,7 +11,7 @@ hooks:
 theme:
   name: material
   custom_dir: overrides
-  logo: assets/logo.svg
+  logo: assets/logo-white.svg
   favicon: assets/favicon.png
   # Disable Material's Google Fonts; we self-host Inter (see extra.css) for offline use.
   font: false
@@ -36,6 +36,7 @@ theme:
     - navigation.tabs.sticky
     - navigation.sections      # chapters grouped in the left sidebar
     - navigation.top           # back-to-top button
+    - navigation.footer        # prev/next links at the bottom of each page
     - navigation.indexes       # a book's index.md is its overview page
     - navigation.tracking
     - toc.follow

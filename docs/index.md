@@ -1,6 +1,6 @@
-# Precision Ag — Field SOPs
+# Field Standard Operating Procedures
 
-Field standard operating procedures. Pick a manual below, or use the search box (top right) to jump straight to any step, part number or error message.
+Pick a manual below, or use the search box (top right) to jump straight to any step, part number or error message.
 
 <div class="grid cards" markdown>
 

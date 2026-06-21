@@ -1,87 +1,31 @@
-/* ==========================================================================
-   Precision Ag — brand foundation
-   Exact brand colours sampled from the official logo (Logo.svg):
-     Navy  #263445   Green #8FB73E   white "ag" mark
-   ========================================================================== */
+/* Precision Ag brand foundation (logo colours: navy #263445, green #8FB73E) */
 :root {
-  --pag-navy:        #263445;
-  --pag-navy-light:  #34465a;
-  --pag-navy-dark:   #18222b;
-  --pag-green:       #8FB73E;
-  --pag-spine:       #1e2a34;  /* binder spine (slightly darker than brand navy) */
-  --pag-spine-border:#0d1519;
+  --pag-navy:#263445; --pag-navy-light:#34465a; --pag-navy-dark:#18222b;
+  --pag-green:#8FB73E; --pag-spine:#1e2a34; --pag-spine-border:#0d1519;
 }
-
-/* Self-hosted Inter (variable, latin subset) — works offline, no CDN.
-   theme.font is disabled in mkdocs.yml so Material does not pull Google Fonts. */
 @font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url('../assets/fonts/inter.woff2') format('woff2');
+  font-family:'Inter'; font-style:normal; font-weight:100 900; font-display:swap;
+  src:url('../assets/fonts/inter.woff2') format('woff2');
 }
-
-:root {
-  /* graceful degradation if the woff2 fails (e.g. truly offline first paint) */
-  --md-text-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-}
-
-/* Brand palette applied to Material's custom colour scheme */
+:root { --md-text-font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
 [data-md-color-scheme="default"] {
-  --md-primary-fg-color:        var(--pag-navy);
-  --md-primary-fg-color--light: var(--pag-navy-light);
-  --md-primary-fg-color--dark:  var(--pag-navy-dark);
-  --md-primary-bg-color:        #ffffff;
-  --md-accent-fg-color:         var(--pag-green);
+  --md-primary-fg-color:var(--pag-navy); --md-primary-fg-color--light:var(--pag-navy-light);
+  --md-primary-fg-color--dark:var(--pag-navy-dark); --md-primary-bg-color:#ffffff;
+  --md-accent-fg-color:var(--pag-green);
 }
-[data-md-color-scheme="slate"] {
-  --md-primary-fg-color:        var(--pag-navy);
-  --md-primary-fg-color--light: var(--pag-navy-light);
-  --md-primary-fg-color--dark:  var(--pag-navy-dark);
-  --md-accent-fg-color:         var(--pag-green);
-}
+[data-md-color-scheme="slate"] { --md-primary-fg-color:var(--pag-navy); --md-accent-fg-color:var(--pag-green); }
+.md-typeset a { color:var(--pag-green); }
+.md-typeset a:hover { color:var(--pag-navy); }
+.md-typeset { font-size:.82rem; line-height:1.7; }
+.md-typeset h1 { font-weight:700; color:var(--pag-navy); }
+.md-source-file { font-size:.7rem; }
+.md-typeset .admonition.danger { border-left-width:5px; }
+.md-typeset img { border:1px solid rgba(0,0,0,.10); border-radius:6px; }
+.md-header__button.md-logo img, .md-header__button.md-logo svg { border:0; height:1.5rem; width:auto; }
+.md-typeset .twemoji svg { border:0; }
 
-.md-typeset a { color: var(--pag-green); }
-.md-typeset a:hover { color: var(--pag-navy); }
-
-/* ==========================================================================
-   Field-readability: larger body text, high contrast
-   ========================================================================== */
-.md-typeset { font-size: .82rem; line-height: 1.7; }
-.md-typeset h1 { font-weight: 700; }
-.md-source-file { font-size: .7rem; }
-
-/* SWMS callout = danger admonition, tinted strongly */
-.md-typeset .admonition.danger { border-left-width: 5px; }
-
-/* Screenshots: subtle border so UI shots don't bleed into the page */
-.md-typeset img { border: 1px solid rgba(0,0,0,.12); border-radius: 4px; }
-/* logo + inline icons must not get the screenshot border */
-.md-header__button.md-logo img,
-.md-typeset .twemoji svg { border: 0; }
-
-/* ==========================================================================
-   TASK 1 — Binder spine navigation
-   Desktop (>=76.25em): the primary sidebar becomes a narrow dark binder spine,
-   one icon-tab per chapter with a number + hover tooltip. Below that breakpoint
-   Material's standard drawer takes over (icon + full text label).
-   Icons are MDI paths as mask-image data-URIs (offline-safe, recolourable).
-   ========================================================================== */
-
-/* --- icon per chapter (applies in spine AND drawer) --- */
-.md-nav--primary .md-nav__link[href$="surveying/"],
-.md-nav--primary .md-nav__link[href$="00-introduction/"],
-.md-nav--primary .md-nav__link[href$="01-equipment-needed/"],
-.md-nav--primary .md-nav__link[href$="02-setup-polaris/"],
-.md-nav--primary .md-nav__link[href$="03-setup-ute/"],
-.md-nav--primary .md-nav__link[href$="04-survey-setup/"],
-.md-nav--primary .md-nav__link[href$="05-exporting/"],
-.md-nav--primary .md-nav__link[href$="06-troubleshooting/"],
-.md-nav--primary .md-nav__link[href$="07-support/"] {
-  /* marker so only mapped links get an icon box */
-}
-.md-nav--primary .md-nav__link::before { content: none; }
+/* ===== Binder spine + dark canvas / white content card (design draft) ===== */
+.md-nav--primary .md-nav__link::before { content:none; }
 .md-nav--primary .md-nav__link[href$="surveying/"]::before,
 .md-nav--primary .md-nav__link[href$="00-introduction/"]::before,
 .md-nav--primary .md-nav__link[href$="01-equipment-needed/"]::before,
@@ -91,14 +35,9 @@
 .md-nav--primary .md-nav__link[href$="05-exporting/"]::before,
 .md-nav--primary .md-nav__link[href$="06-troubleshooting/"]::before,
 .md-nav--primary .md-nav__link[href$="07-support/"]::before {
-  content: "";
-  display: inline-block;
-  width: 18px; height: 18px;
-  flex: 0 0 18px;
-  margin-right: .6rem;
-  -webkit-mask: var(--pag-ico) center / contain no-repeat;
-          mask: var(--pag-ico) center / contain no-repeat;
-  background-color: var(--pag-navy);
+  content:""; display:inline-block; width:18px; height:18px; flex:0 0 18px; margin-right:.6rem;
+  -webkit-mask:var(--pag-ico) center/contain no-repeat; mask:var(--pag-ico) center/contain no-repeat;
+  background-color:var(--pag-navy);
 }
 .md-nav--primary .md-nav__link[href$="surveying/"] { --pag-ico: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Cpath%20d='M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z'/%3E%3C/svg%3E"); }
 .md-nav--primary .md-nav__link[href$="00-introduction/"] { --pag-ico: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Cpath%20d='M19%202L14%206.5V17.5L19%2013V2M6.5%205C4.55%205%202.45%205.4%201%206.5V21.16C1%2021.41%201.25%2021.66%201.5%2021.66C1.6%2021.66%201.65%2021.59%201.75%2021.59C3.1%2020.94%205.05%2020.5%206.5%2020.5C8.45%2020.5%2010.55%2020.9%2012%2022C13.35%2021.15%2015.8%2020.5%2017.5%2020.5C19.15%2020.5%2020.85%2020.81%2022.25%2021.56C22.35%2021.61%2022.4%2021.59%2022.5%2021.59C22.75%2021.59%2023%2021.34%2023%2021.09V6.5C22.4%206.05%2021.75%205.75%2021%205.5V19C19.9%2018.65%2018.7%2018.5%2017.5%2018.5C15.8%2018.5%2013.35%2019.15%2012%2020V6.5C10.55%205.4%208.45%205%206.5%205Z'/%3E%3C/svg%3E"); }
@@ -110,94 +49,39 @@
 .md-nav--primary .md-nav__link[href$="06-troubleshooting/"] { --pag-ico: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Cpath%20d='M22.7,19L13.6,9.9C14.5,7.6%2014,4.9%2012.1,3C10.1,1%207.1,0.6%204.7,1.7L9,6L6,9L1.6,4.7C0.4,7.1%200.9,10.1%202.9,12.1C4.8,14%207.5,14.5%209.8,13.6L18.9,22.7C19.3,23.1%2019.9,23.1%2020.3,22.7L22.6,20.4C23.1,20%2023.1,19.3%2022.7,19Z'/%3E%3C/svg%3E"); }
 .md-nav--primary .md-nav__link[href$="07-support/"] { --pag-ico: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Cpath%20d='M12,1C7,1%203,5%203,10V17A3,3%200%200,0%206,20H9V12H5V10A7,7%200%200,1%2012,3A7,7%200%200,1%2019,10V12H15V20H19V21H12V23H18A3,3%200%200,0%2021,20V10C21,5%2016.97,1%2012,1Z'/%3E%3C/svg%3E"); }
 
-/* --- spine layout: desktop only --- */
-@media screen and (min-width: 76.25em) {
-  .md-sidebar--primary { width: 56px; }
-  .md-sidebar--primary .md-sidebar__scrollwrap { margin: 0; overflow: visible; }
-  .md-sidebar--primary .md-sidebar__inner { padding: 0; }
-
-  .md-nav--primary {
-    background: var(--pag-spine);
-    border-right: 2px solid var(--pag-spine-border);
-    min-height: 100%;
+@media screen and (min-width:76.25em) {
+  .md-main { background:var(--pag-spine); }
+  .md-content {
+    background:#fff; border-radius:0 14px 14px 0;
+    box-shadow:0 3px 16px rgba(0,0,0,.20); min-height:72vh; margin:14px 0;
   }
-  .md-nav--primary > .md-nav__title { display: none; }
-  .md-nav--primary .md-nav__list { padding: 6px 0 0; }
-  .md-nav--primary .md-nav__item { position: relative; padding: 0; }
-
+  .md-sidebar--secondary .md-nav__title, .md-sidebar--secondary .md-nav__link { color:#aeb9c4; }
+  .md-sidebar--secondary .md-nav__link--active, .md-sidebar--secondary .md-nav__link:hover { color:var(--pag-green); }
+  .md-sidebar--primary { width:60px; background:var(--pag-spine); }
+  .md-sidebar--primary .md-sidebar__scrollwrap { margin:0; overflow:visible; }
+  .md-sidebar--primary .md-sidebar__inner { padding:0; }
+  .md-nav--primary { background:var(--pag-spine); min-height:100%; }
+  .md-nav--primary > .md-nav__title { display:none; }
+  .md-nav--primary .md-nav__list { padding:14px 0 0; }
+  .md-nav--primary .md-nav__item { position:relative; padding:0; margin:3px 0; }
   .md-nav--primary .md-nav__link {
-    position: relative;
-    height: 56px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-    margin: 0;
-    padding: 0;
-    border-radius: 6px 0 0 6px;
-    color: #b8c4cf;
-    font-size: 0;            /* hide the text label */
-    transition: background .12s ease;
+    position:relative; box-sizing:border-box; height:54px; width:100%;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:4px; margin:0; padding:0; border-radius:12px 0 0 12px;
+    color:#aeb9c4; font-size:0; transition:background .12s ease;
   }
-  .md-nav--primary .md-nav__link:hover { background: rgba(255,255,255,.06); }
-
-  .md-nav--primary .md-nav__link::before {
-    margin-right: 0;        /* centred in the column, not inline */
-    background-color: #cfd8e0;
-  }
-  .md-nav--primary .pag-num {
-    font-size: 8px;
-    line-height: 1;
-    font-weight: 600;
-    color: #7e8a96;
-    letter-spacing: .02em;
-  }
-
-  /* active tab: white, pops off the dark spine */
-  .md-nav--primary .md-nav__item--active > .md-nav__link {
-    background: #fff;
-    color: var(--pag-navy);
-  }
-  .md-nav--primary .md-nav__item--active > .md-nav__link::before {
-    background-color: var(--pag-navy);
-  }
-  .md-nav--primary .md-nav__item--active > .md-nav__link .pag-num {
-    color: var(--pag-navy);
-  }
-  /* 2px white connector covering the spine border -> tab "joins" the page */
-  .md-nav--primary .md-nav__item--active::after {
-    content: "";
-    position: absolute;
-    top: 0; right: -2px;
-    width: 2px; height: 100%;
-    background: #fff;
-    z-index: 3;
-  }
-
-  /* hover tooltip with the full chapter name, to the right of the spine */
+  .md-nav--primary .md-nav__link:hover { background:rgba(255,255,255,.07); }
+  .md-nav--primary .md-nav__link::before { margin-right:0; width:20px; height:20px; background-color:#aeb9c4; }
+  .md-nav--primary .pag-num { font-size:8.5px; line-height:1; font-weight:700; color:#8693a0; letter-spacing:.04em; }
+  .md-nav--primary .md-nav__item--active > .md-nav__link { background:#fff; color:var(--pag-navy); }
+  .md-nav--primary .md-nav__item--active > .md-nav__link::before { background-color:var(--pag-green); }
+  .md-nav--primary .md-nav__item--active > .md-nav__link .pag-num { color:var(--pag-navy); }
   .md-nav--primary .md-nav__link::after {
-    content: attr(data-tip);
-    position: absolute;
-    left: calc(100% + 8px);
-    top: 50%;
-    transform: translateY(-50%);
-    background: #24303C;
-    color: #fff;
-    font-size: 11px;
-    padding: 4px 10px;
-    border-radius: 5px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .15s ease;
-    z-index: 200;
+    content:attr(data-tip); position:absolute; left:calc(100% + 6px); top:50%; transform:translateY(-50%);
+    background:var(--pag-navy); color:#fff; font-size:11px; padding:4px 10px; border-radius:5px;
+    white-space:nowrap; opacity:0; pointer-events:none; transition:opacity .15s ease; z-index:200;
   }
-  .md-nav--primary .md-nav__link:hover::after { opacity: 1; }
+  .md-nav--primary .md-nav__link:hover::after { opacity:1; }
+  .md-content h1 { border-bottom:3px solid var(--pag-green); padding-bottom:.2em; }
 }
-
-/* drawer (narrow screens): hide the spine-only chapter number, keep icon + text */
-@media screen and (max-width: 76.2399em) {
-  .md-nav--primary .pag-num { display: none; }
-}
+@media screen and (max-width:76.2399em) { .md-nav--primary .pag-num { display:none; } }
