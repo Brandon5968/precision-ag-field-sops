@@ -48,9 +48,6 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
-extra_javascript:
-  - javascripts/sw-register.js
-  - javascripts/offline-button.js
 
 plugins:
   - search
