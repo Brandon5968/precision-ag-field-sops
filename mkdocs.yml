@@ -8,18 +8,18 @@ copyright: Internal use only — Precision Ag
 theme:
   name: material
   palette:
-    # light mode (best for sunlight readability in the field)
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: blue
+    # Default to LIGHT (best for sunlight readability in the field).
+    # Brand colours (navy #24303C / green #84B43C) are applied as custom
+    # palette values via docs/stylesheets/extra.css.
+    - scheme: default
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: indigo
-      accent: blue
+    - scheme: slate
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
@@ -60,6 +60,10 @@ markdown_extensions:
   - tables
   - attr_list
   - md_in_html
+  # Renders the Material icons used on the home-page cards (:material-…:).
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - toc:
       permalink: true
 
@@ -75,10 +79,10 @@ nav:
   - Surveying:
       - surveying/index.md
       - Introduction: surveying/00-introduction.md
-      - Equipment Needed: surveying/01-equipment-needed.md
+      - Equipment Required: surveying/01-equipment-needed.md
       - Equipment Setup (Polaris): surveying/02-setup-polaris.md
       - Equipment Setup (Ute): surveying/03-setup-ute.md
-      - Survey Setup (Electronic): surveying/04-survey-setup.md
+      - Survey Setup (T3RRA on the Getac): surveying/04-survey-setup.md
       - Exporting: surveying/05-exporting.md
       - Troubleshooting: surveying/06-troubleshooting.md
       - Support: surveying/07-support.md

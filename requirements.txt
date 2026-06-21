@@ -1,2 +1,5 @@
-mkdocs-material
-mkdocs-git-revision-date-localized-plugin
+# Pinned to avoid the upcoming MkDocs 2.0 breaking changes (see brief §9).
+# Bump deliberately and re-run `mkdocs build --strict` after any change.
+mkdocs==1.6.1
+mkdocs-material==9.7.6
+mkdocs-git-revision-date-localized-plugin==1.5.3
