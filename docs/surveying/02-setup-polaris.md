@@ -6,10 +6,10 @@ title: Equipment Setup (Polaris)
 How to mount, wire and power the DualEM rig on the **Polaris** before you start a
 survey.
 
-!!! warning "DRAFT — content to be supplied"
-    This chapter is **not in the source deck**. Brandon will supply the Polaris setup
-    procedure. Everything below is a scaffold — **do not treat the `[CONFIRM]` lines
-    as real steps.**
+!!! warning "DRAFT: content to be supplied"
+    This chapter is not in the source deck. Brandon will supply the Polaris setup
+    procedure. Everything below is a scaffold. Do not treat the `[CONFIRM]` lines as
+    real steps.
 
 !!! info "AT A GLANCE"
     `[CONFIRM: the single most important thing for the Polaris setup — e.g. cradle

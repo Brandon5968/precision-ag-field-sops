@@ -3,8 +3,8 @@ title: Troubleshooting
 ---
 # :material-wrench: Troubleshooting
 
-Quick fixes for the faults that stop a survey. This table is **seeded from the
-verification cues in the guide** — it will grow as we hit (and solve) more in the
+Quick fixes for the faults that stop a survey. This table is seeded from the
+verification cues in the guide. It will grow as we hit and solve more faults in the
 field.
 
 !!! info "AT A GLANCE"
@@ -23,12 +23,12 @@ field.
 | `[CONFIRM: other common field faults Brandon/techs have hit]` | | |
 
 !!! warning "WARNING"
-    Always confirm the **`$PDLS1`** value is updating **five times per second** before
-    you start driving. Surveying with a unit that isn't reading correctly wastes the
-    whole run.
+    Always confirm the `$PDLS1` value is updating five times per second before you
+    start driving. Surveying with a unit that is not reading correctly wastes the whole
+    run.
 
 ## Escalation
 
-If you've worked the COM-port / cable / power checks and it still won't go, contact
-**Brandon — 0472 810 174** (see [Support](07-support.md)).
+If you have worked the COM port, cable, and power checks and it still will not work,
+contact **Brandon on 0472 810 174** (see [Support](07-support.md)).
 `[CONFIRM: after-hours and hardware-vs-software escalation path.]`

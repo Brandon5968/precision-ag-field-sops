@@ -4,13 +4,13 @@ title: Survey Setup (T3RRA on the Getac)
 # :material-laptop: Survey Setup (T3RRA on the Getac)
 
 The full click-by-click for setting up and running a DualEM survey in **T3RRA Survey
-(v2.279)** on the Getac — from opening the app to running the survey lines. Exporting
-is covered in the next chapter, [Exporting](05-exporting.md).
+(v2.279)** on the Getac. Exporting is covered in the next chapter,
+[Exporting](05-exporting.md).
 
 !!! info "AT A GLANCE"
-    Set up the job in the Wizard → import and read the boundary → connect GPS and the
-    DualEM → confirm the **`$PDLS1`** value is updating **5× per second** → set your AB
-    line → drive the survey.
+    Set up the job in the Wizard, import and read the boundary, connect GPS and the
+    DualEM, then drive the AB line. Confirm the `$PDLS1` value updates five times per
+    second before you survey.
 
 ## 1. Open T3RRA & start the Wizard
 
@@ -26,7 +26,7 @@ Fill in the pop-up form with the following details, then select **OK**:
 | **Grower** | Client name |
 | **Farm** | Deal ID |
 | **Field** | Name of the paddock. If covering multiple paddocks, enter **"Multi Paddock"** |
-| **Project Name** | Leave it — this auto-generates with today's date |
+| **Project Name** | Leave it. This auto-generates with today's date |
 
 ## 2. Import the boundary
 
@@ -53,18 +53,18 @@ dropdown. Click **Import**.
 
 In the **Data Type** window, select **DualEM 1S**, then click **Start**.
 
-You will see the boundary load on screen. Once loaded, select **Settings** in the
-top-right corner.
+The boundary loads on screen. Once it has loaded, select **Settings** in the top-right
+corner.
 
 ![Data Type window with DualEM 1S selected, then the loaded boundary with Settings highlighted](img/data-type-dualem.png)
-*Select **DualEM 1S** → **Start**, then open **Settings** (top-right).*
+*Select **DualEM 1S**, click **Start**, then open **Settings** (top-right).*
 
 ## 5. Connect GPS
 
 Go to the **GPS** tab and click the **Scan for GPS** button.
 
-The port scan will display the COM port your GPS is connected to. Click **Connect** —
-the system will automatically select the correct port.
+The port scan displays the COM port your GPS is connected to. Click **Connect**. The
+system selects the correct port automatically.
 
 ![GPS tab with Scan for GPS highlighted, then the scan results with Connect highlighted](img/gps-scan.png)
 *Click **Scan for GPS**, then **Connect**. The correct port is selected automatically.*
@@ -78,16 +78,15 @@ How you connect depends on your setup:
 | **Wireless** | The DualEM will **always be on COM Port 20**. Select it and click **Connect**. |
 | **Wired** | Open **Device Manager** to find the correct COM port, update the dropdown, then click **Connect**. |
 
-!!! warning "WARNING — verify the data before you drive"
-    Correct DualEM data will show a **`$PDLS1`** value **updating five times per
-    second**. If you don't see `$PDLS1` updating at that rate, the unit is **not**
-    reading correctly — stop and fix it (see [Troubleshooting](06-troubleshooting.md))
-    before surveying.
+!!! warning "WARNING: verify the data before you drive"
+    Correct DualEM data shows a `$PDLS1` value updating five times per second. If you
+    do not see `$PDLS1` updating at that rate, the unit is not reading correctly. Stop
+    and fix it before surveying (see [Troubleshooting](06-troubleshooting.md)).
 
-Once confirmed, click **Close** — your settings will save automatically.
+Once confirmed, click **Close**. Your settings save automatically.
 
 ![DualEM connection settings showing the $PDLS1 value streaming five times per second](img/dualem-connect-pdls1.png)
-*A live **`$PDLS1`** value confirms the DualEM is reading. Then click **Close**.*
+*A live `$PDLS1` value confirms the DualEM is reading. Then click **Close**.*
 
 ## 7. Set the AB line & start
 
@@ -97,8 +96,8 @@ at the top of the screen.
 Click **Set** next to **Point A** and begin driving.
 
 !!! note "NOTE"
-    The Guidance window **cannot be minimised** while you set the AB line, but you can
-    move it to the side of the screen.
+    The Guidance window cannot be minimised while you set the AB line. You can move it
+    to the side of the screen.
 
 When you reach **Point B**, click **Set**, then click **Apply**.
 
@@ -108,14 +107,14 @@ When you reach **Point B**, click **Set**, then click **Apply**.
 ## 8. Run the survey
 
 As with **Farmworks**, the navigation light bar is at the top of the screen and your
-AB lines are displayed. A metre value also shows how close you are to the line.
+AB lines are displayed. A metre value shows how close you are to the line.
 
 Once your survey is complete, click **Stop**, then click the **Return** button in the
 top right. When prompted, select **Yes** to keep changes to elevation points.
 
 ![Survey running with the navigation light bar, then the "keep changes to elevation points?" prompt with Yes highlighted](img/survey-run.png)
-*Drive the AB lines. When done: **Stop** → **Return** → **Yes**.*
+*Drive the AB lines. When done, click **Stop**, **Return**, then **Yes**.*
 
 ---
 
-Next: [Exporting](05-exporting.md) — get the data off the Getac and to the GIS team.
+Next: [Exporting](05-exporting.md). Get the data off the Getac and to the GIS team.
