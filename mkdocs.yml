@@ -7,6 +7,10 @@ copyright: Internal use only — Precision Ag
 
 theme:
   name: material
+  logo: assets/logo.svg
+  favicon: assets/favicon.png
+  # Disable Material's Google Fonts; we self-host Inter (see extra.css) for offline use.
+  font: false
   palette:
     # Default to LIGHT (best for sunlight readability in the field).
     # Brand colours (navy #24303C / green #84B43C) are applied as custom
@@ -23,9 +27,6 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
-  font:
-    text: Roboto
-    code: Roboto Mono
   features:
     - navigation.tabs          # books appear as tabs across the top
     - navigation.tabs.sticky
