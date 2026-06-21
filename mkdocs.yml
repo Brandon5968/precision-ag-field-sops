@@ -1,12 +1,16 @@
 site_name: Precision Ag — Field SOPs
 site_description: Field standard operating procedures for Precision Ag
 site_author: Precision Ag
-# IMPORTANT: set this to your Cloudflare Pages URL once deployed
-site_url: https://field-sops.pages.dev/
+site_url: https://precision-ag-field-sops.pages.dev/
 copyright: Internal use only — Precision Ag
+
+# Build hook: emit /offline-manifest.json (full page+asset list) for the PWA.
+hooks:
+  - hooks/offline_manifest.py
 
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/logo.svg
   favicon: assets/favicon.png
   # Disable Material's Google Fonts; we self-host Inter (see extra.css) for offline use.
@@ -45,6 +49,8 @@ extra_css:
 
 extra_javascript:
   - javascripts/spine-nav.js
+  - javascripts/sw-register.js
+  - javascripts/offline-button.js
 
 plugins:
   - search
