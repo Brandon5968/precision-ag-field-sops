@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting
 ---
-# Troubleshooting
+# :material-wrench: Troubleshooting
 
 Quick fixes for the faults that stop a survey. This table is **seeded from the
 verification cues in the guide** — it will grow as we hit (and solve) more in the

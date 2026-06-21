@@ -1,7 +1,7 @@
 ---
 title: Equipment Setup (Ute)
 ---
-# Equipment Setup (Ute)
+# :material-truck: Equipment Setup (Ute)
 
 How to mount, wire and power the DualEM rig on the **ute** before you start a survey.
 

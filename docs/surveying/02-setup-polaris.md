@@ -1,7 +1,7 @@
 ---
 title: Equipment Setup (Polaris)
 ---
-# Equipment Setup (Polaris)
+# :material-motorbike: Equipment Setup (Polaris)
 
 How to mount, wire and power the DualEM rig on the **Polaris** before you start a
 survey.

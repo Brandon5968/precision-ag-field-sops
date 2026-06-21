@@ -1,7 +1,7 @@
 ---
 title: Equipment Required
 ---
-# Equipment Required
+# :material-package-variant-closed: Equipment Required
 
 Before heading out, make sure you have the following kit. Pack against this list —
 a missing cable can cost you a whole job.

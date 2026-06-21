@@ -1,7 +1,7 @@
 ---
 title: Introduction
 ---
-# Introduction
+# :material-book-open-page-variant: Introduction
 
 This guide covers how to set up the **DualEM** and the **T3RRA** application to run
 soil survey jobs in the field. It is for Precision Ag field techs and walks through

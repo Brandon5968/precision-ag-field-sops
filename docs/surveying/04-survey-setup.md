@@ -1,7 +1,7 @@
 ---
 title: Survey Setup (T3RRA on the Getac)
 ---
-# Survey Setup (T3RRA on the Getac)
+# :material-laptop: Survey Setup (T3RRA on the Getac)
 
 The full click-by-click for setting up and running a DualEM survey in **T3RRA Survey
 (v2.279)** on the Getac — from opening the app to running the survey lines. Exporting

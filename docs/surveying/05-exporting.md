@@ -1,7 +1,7 @@
 ---
 title: Exporting
 ---
-# Exporting
+# :material-database-export: Exporting
 
 Get the completed survey off the Getac and confirm it has reached the GIS team. This
 follows straight on from [Survey Setup](04-survey-setup.md).
