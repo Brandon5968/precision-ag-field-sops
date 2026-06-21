@@ -43,6 +43,9 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/spine-nav.js
+
 plugins:
   - search
   - git-revision-date-localized:
