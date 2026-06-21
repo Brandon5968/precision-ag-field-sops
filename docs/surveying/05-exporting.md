@@ -1,37 +1,47 @@
 ---
 title: Exporting
 ---
-
 # Exporting
 
-How to close out the job, export the data in the correct format, and get it to the back office reliably. Do this before you leave the paddock where possible.
+Get the completed survey off the Getac and confirm it has reached the GIS team. This
+follows straight on from [Survey Setup](04-survey-setup.md).
 
-!!! note "At a glance"
-    Export and verify on-site. A file you can't open is only a problem if you find out tomorrow.
+!!! info "AT A GLANCE"
+    Export as **CSV** with **both** *All Boundaries* and *Survey Data* ticked → save into
+    the **PA Survey – General – Deal ID** folder → the files upload to SharePoint
+    automatically. **No need to email them.**
 
-## 1. Close the job
+## 1. Export the data
 
-1. Stop logging and save / close the job in [CONFIRM software].
-2. [CONFIRM: any end-of-job checks the software prompts]
+Both the **elevation data** and **boundary data** will show with a **green tick** when
+complete. Select **Export** in the bottom right.
 
-## 2. Export
+Select **CSV** and tick **both**:
 
-1. [CONFIRM: export menu / steps]
-2. [CONFIRM: required file format — e.g. CSV / proprietary]
-3. [CONFIRM: file naming to match the job convention]
+- [ ] **All Boundaries**
+- [ ] **Survey Data**
 
-## 3. Verify
+Then click **Export**.
 
-- [ ] File opens and has the expected number of points
-- [ ] GPS coordinates present and sensible
-- [ ] No obvious gaps across the paddock
-- [ ] Filename matches the convention
+![Collect screen with green ticks and Export highlighted, then the export dialog with CSV, All Boundaries and Survey Data ticked](img/export-csv.png)
+*Select **CSV**, tick **both** *All Boundaries* and *Survey Data*, then **Export**.*
 
-## 4. Transfer to office
+## 2. Confirm and send to SharePoint
 
-1. [CONFIRM: upload method — e.g. SharePoint / cloud / sync]
-2. [CONFIRM: where the file goes / which folder]
-3. [CONFIRM: who to notify that the job is in]
+This should open your working folder automatically. If it doesn't, locate
+**`PA Survey – General – Deal ID`** in the left-hand panel of File Explorer, select
+your folder, and click **Select Folder**.
 
-!!! warning "DON'T WIPE TOO EARLY"
-    Keep the raw data on the device until you've confirmed it's safely received at the office. [CONFIRM your retention rule.]
+If you see the confirmation screen, the export was successful.
+
+![File Explorer at the PA Survey folder with Select Folder highlighted, then the "data has been exported" confirmation](img/export-confirm.png)
+*Save into **PA Survey – General – Deal ID**. The confirmation screen means success.*
+
+!!! tip "TIP — no email needed"
+    The files are loaded directly into **SharePoint**, so there is no need to email
+    them. They upload automatically and reach the **GIS team within minutes**.
+
+!!! warning "WARNING"
+    Don't leave the field assuming the upload worked if you never saw the confirmation
+    screen. If the export didn't land in `PA Survey – General – Deal ID`, see
+    [Troubleshooting](06-troubleshooting.md).

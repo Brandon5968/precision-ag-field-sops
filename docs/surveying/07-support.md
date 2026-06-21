@@ -1,34 +1,33 @@
 ---
 title: Support
 ---
-
 # Support
 
-Where to get help when the field fixes run out, and how to feed problems and improvements back so this manual keeps getting better.
+Who to call when something isn't right in the field.
 
-!!! note "At a glance"
-    Stuck after Troubleshooting? Don't burn the day guessing — escalate.
+!!! info "AT A GLANCE"
+    For any support or clarification: **Brandon — 0472 810 174.**
 
-## Contacts
+## Contact
 
-| For | Contact | Details |
-| --- | --- | --- |
-| Field / operational help | [CONFIRM name] | [phone] / [hours] |
-| Technical / data issues | [CONFIRM name] | [phone / email] |
-| Equipment / hardware | [CONFIRM name] | [phone / email] |
-| After hours / urgent | [CONFIRM] | [phone] |
+- **Brandon** — **0472 810 174** — first point of contact for any support or
+  clarification on the survey setup or the DualEM / T3RRA workflow.
 
-## Escalation path
+## Escalation
 
-1. Work the Troubleshooting table.
-2. Call field/operational support with your notes.
-3. If unresolved, escalate to technical support.
-4. Log the issue [CONFIRM: where, e.g. ClickUp / form].
+`[CONFIRM: escalation path — e.g. after-hours contact, and whether hardware faults
+(DualEM / Emlid / cabling) go to a different contact than software/T3RRA issues.]`
 
-!!! tip "IMPROVE THIS MANUAL"
-    Found a step that's wrong, missing or unclear? Report it via [CONFIRM: feedback form / QR code]. Real field feedback is what turns this draft into the version everyone trusts.
+## Before you call
 
-![QR code to the feedback form / latest version. [ADD QR]](img/REPLACE-ME.png)
-*QR code to the feedback form / latest version. [ADD QR]*
+Have these ready — it gets you a faster answer:
 
-<!-- TODO: drop the screenshot in img/ and update the filename above -->
+- [ ] What step were you on? (e.g. "Connect the DualEM — step 6")
+- [ ] What did you expect vs. what you saw? (e.g. "no `$PDLS1` value")
+- [ ] Wired or wireless DualEM, and which COM port?
+- [ ] Polaris or ute?
+- [ ] Any on-screen error text or codes.
+
+!!! note "NOTE"
+    Many issues are covered in [Troubleshooting](06-troubleshooting.md) — check there
+    first; it'll often save you the call.

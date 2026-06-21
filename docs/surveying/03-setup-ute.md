@@ -1,44 +1,38 @@
 ---
 title: Equipment Setup (Ute)
 ---
-
 # Equipment Setup (Ute)
 
-How to mount, wire and balance the EM38 + Dual EMS for towing behind the Ute. Same logic as the Polaris — mechanical, power, data, check — but the mount and clearances differ.
+How to mount, wire and power the DualEM rig on the **ute** before you start a survey.
 
-!!! note "At a glance"
-    The Ute is for [CONFIRM: larger paddocks / road travel between sites]. Mind the longer tow length on turns and gates.
+!!! warning "DRAFT — content to be supplied"
+    This chapter is **not in the source deck**. Brandon will supply the ute setup
+    procedure. Everything below is a scaffold — **do not treat the `[CONFIRM]` lines
+    as real steps.**
 
-!!! danger "SAFETY FIRST"
-    Confirm the tow hitch and any safety chains are rated and secured before moving. Check the sensor sled tracks correctly behind the Ute and won't fishtail or strike obstacles.
+!!! info "AT A GLANCE"
+    `[CONFIRM: the single most important thing for the ute setup.]`
 
-## 1. Mechanical mount / tow
+## Mounting the DualEM
 
-1. [CONFIRM: hitch type and attachment]
-2. [CONFIRM: sled/cart coupling and safety chains]
-3. [CONFIRM: sensor height / ground clearance]
-4. Confirm tracking and clearance at full turn.
+The ute is already fitted with a DualEM cradle (see [Equipment Required](01-equipment-needed.md)).
 
-![Photo: sensor sled hitched behind the Ute. [ADD PHOTO]](img/REPLACE-ME.png)
-*Photo: sensor sled hitched behind the Ute. [ADD PHOTO]*
+1. `[CONFIRM: how the DualEM seats into the ute cradle and how it is secured.]`
+2. `[CONFIRM: orientation / clearance / height off the ground.]`
 
-<!-- TODO: drop the screenshot in img/ and update the filename above -->
+## Power
 
-## 2. Power connection
+1. `[CONFIRM: where the ute integrated power source connects to the DualEM.]`
+2. `[CONFIRM: fallback when no integrated power — Anderson-to-alligator-clamp battery.]`
 
-1. [CONFIRM: power source and routing]
-2. [CONFIRM: connector order and polarity]
-3. Verify sensor and logger power up.
+## Cabling
 
-## 3. Data connection
+1. `[CONFIRM: which cables run where — Power & Data (DB9), DB9-to-USB, Emlid cable.]`
+2. `[CONFIRM: wired vs wireless routing on the ute.]`
 
-1. [CONFIRM: sensor → logger cable]
-2. [CONFIRM: GNSS → logger cable]
-3. Confirm logger sees sensor + GPS fix.
+## Pre-drive checklist
 
-## 4. Pre-move function check
-
-- [ ] Sensor reading and not erroring
-- [ ] GPS fix acquired [CONFIRM: required fix quality]
-- [ ] Logging starts/stops correctly
-- [ ] Tow secure, chains on, sled tracking true
+- [ ] `[CONFIRM: DualEM seated and secured]`
+- [ ] `[CONFIRM: power connected]`
+- [ ] `[CONFIRM: cables routed and strain-relieved]`
+- [ ] `[CONFIRM: Emlid receiver mounted and powered]`

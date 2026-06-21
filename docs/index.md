@@ -8,7 +8,7 @@ Field standard operating procedures. Pick a manual below, or use the search box 
 
     ---
 
-    EM38 + Dual EMS electromagnetic induction soil survey, start to finish.
+    DualEM + T3RRA soil survey on the Getac, start to finish.
 
     [:octicons-arrow-right-24: Open manual](surveying/index.md)
 

@@ -1,47 +1,41 @@
 ---
 title: Equipment Setup (Polaris)
 ---
-
 # Equipment Setup (Polaris)
 
-How to mount, wire and balance the EM38 + Dual EMS on the Polaris for clean data and a safe tow. Follow the order — mechanical mount first, then power, then data, then a function check.
+How to mount, wire and power the DualEM rig on the **Polaris** before you start a
+survey.
 
-!!! note "At a glance"
-    The Polaris is for [CONFIRM: terrain / paddock conditions where it's preferred]. Keep the sensor clear of metal and engine interference.
+!!! warning "DRAFT — content to be supplied"
+    This chapter is **not in the source deck**. Brandon will supply the Polaris setup
+    procedure. Everything below is a scaffold — **do not treat the `[CONFIRM]` lines
+    as real steps.**
 
-!!! danger "SAFETY FIRST"
-    Engine off and park brake on before mounting anything. Watch pinch points on the tow frame. Confirm the load is secure before moving off — a sensor coming loose at speed is a serious hazard.
+!!! info "AT A GLANCE"
+    `[CONFIRM: the single most important thing for the Polaris setup — e.g. cradle
+    seating / cable routing / power source.]`
 
-## 1. Mechanical mount
+## Mounting the DualEM
 
-1. [CONFIRM: where the mount attaches to the Polaris]
-2. [CONFIRM: how the sensor sled/frame fixes to the mount]
-3. [CONFIRM: required height / ground clearance of the sensor]
-4. Confirm clearance from metal and the engine to avoid interference.
+The Polaris is already fitted with a DualEM cradle (see [Equipment Required](01-equipment-needed.md)).
 
-![Photo: EM38 mounted on the Polaris, correct height shown. [ADD PHOTO]](img/REPLACE-ME.png)
-*Photo: EM38 mounted on the Polaris, correct height shown. [ADD PHOTO]*
+1. `[CONFIRM: how the DualEM seats into the Polaris cradle and how it is secured.]`
+2. `[CONFIRM: orientation of the unit / clearance / height off the ground.]`
 
-<!-- TODO: drop the screenshot in img/ and update the filename above -->
+## Power
 
-## 2. Power connection
+1. `[CONFIRM: where the Polaris integrated power source connects to the DualEM.]`
+2. `[CONFIRM: fallback when no integrated power — Anderson-to-alligator-clamp battery,
+   per the equipment list.]`
 
-1. [CONFIRM: power source — own battery vs vehicle]
-2. [CONFIRM: connector order and polarity]
-3. Verify the sensor and logger both power up.
+## Cabling
 
-## 3. Data connection
+1. `[CONFIRM: which cables run where — Power & Data (DB9), DB9-to-USB, Emlid cable.]`
+2. `[CONFIRM: wired vs wireless routing on the Polaris.]`
 
-1. [CONFIRM: sensor → logger cable]
-2. [CONFIRM: GNSS → logger cable]
-3. Confirm the logger sees both the sensor and a GPS fix.
+## Pre-drive checklist
 
-## 4. Pre-move function check
-
-- [ ] Sensor reading and not erroring
-- [ ] GPS fix acquired [CONFIRM: required fix quality]
-- [ ] Logging starts/stops correctly
-- [ ] Load mechanically secure for tow
-
-!!! note "INTERFERENCE"
-    EM sensors are sensitive to nearby metal and electrical noise. If readings look wrong, re-check the sensor's distance from the vehicle frame before anything else.
+- [ ] `[CONFIRM: DualEM seated and secured]`
+- [ ] `[CONFIRM: power connected]`
+- [ ] `[CONFIRM: cables routed and strain-relieved]`
+- [ ] `[CONFIRM: Emlid receiver mounted and powered]`

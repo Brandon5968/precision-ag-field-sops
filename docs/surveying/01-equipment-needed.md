@@ -1,56 +1,36 @@
 ---
-title: Equipment Needed
+title: Equipment Required
 ---
+# Equipment Required
 
-# Equipment Needed
+Before heading out, make sure you have the following kit. Pack against this list —
+a missing cable can cost you a whole job.
 
-Everything required to run an EM38 + Dual EMS survey. Treat the checklist as a pre-departure pack list: don't leave the depot until every box is ticked.
+!!! info "AT A GLANCE"
+    DualEM unit · power & data cables (DB9) · DB9-to-USB cables · Emlid Reach
+    RS2+/RS3 cable + charger bank · a power source for the DualEM · Emlid GPS RTK
+    receiver · the Getac (or approved device).
 
-!!! note "At a glance"
-    Missing one cable can cost a whole day of travel. Pack against the checklist, not from memory.
+![Survey equipment laid out and numbered 1–8](img/equipment-numbered.png)
+*The full survey kit, numbered to match the list below.*
 
-## Core sensor kit
+## Kit list
 
-- [ ] EM38 sensor unit [CONFIRM: model — e.g. EM38-MK2]
-- [ ] Dual EMS [CONFIRM: exact unit / second sensor description]
-- [ ] Sensor data / power cables [CONFIRM: which cables, qty]
-- [ ] Logging device / data logger [CONFIRM: device + charged]
-- [ ] GNSS / GPS receiver + antenna [CONFIRM: model]
-- [ ] Calibration gear [CONFIRM: nulling stand / spacers]
+- [ ] **DualEM unit**
+- [ ] **2 × Power & Data Cable** — if running wired, use the cable with a **DB9 connector**
+- [ ] **2 × DB9 to USB cables**
+- [ ] **Emlid Reach RS2+/RS3 cable** with DB9 connector, plus **portable charger bank**
+      and **USB-C cable**
+- [ ] **Power source for the DualEM** — your Polaris or ute will have an integrated
+      power source. If not, bring a battery with an **Anderson-to-alligator-clamp**
+      connector *(see Figure 8 in the photo above)*
+- [ ] **Emlid GPS RTK receiver**
+- [ ] **Getac computer** or other approved surveying device
 
-![Photo: the complete sensor kit laid out and labelled. [ADD PHOTO]](img/REPLACE-ME.png)
-*Photo: the complete sensor kit laid out and labelled. [ADD PHOTO]*
+!!! note "NOTE"
+    Your ute or Polaris will **already be fitted with a DualEM cradle** — you don't
+    need to bring one.
 
-<!-- TODO: drop the screenshot in img/ and update the filename above -->
-
-## Power & cabling
-
-- [ ] Batteries (primary) + spare, fully charged
-- [ ] Battery charger + vehicle charging lead
-- [ ] All data cables (sensor → logger → GPS) [CONFIRM exact set]
-- [ ] Spare fuses / connectors [CONFIRM]
-
-## Mounting hardware
-
-Mounting differs by vehicle — see the relevant setup chapter. Common to both:
-
-- [ ] Sled / cart / mount frame [CONFIRM]
-- [ ] Straps, pins, fasteners [CONFIRM]
-- [ ] Tow hardware [CONFIRM]
-
-## Field support & PPE
-
-- [ ] This manual (offline on device) + paddock map
-- [ ] Hi-vis, sun protection, water, first aid kit
-- [ ] Tool kit / multi-tool, cable ties, gaffer tape
-- [ ] Phone / comms with depot, fuel for vehicle
-- [ ] Spare logging media / [CONFIRM: SD card, etc.]
-
-| Item | Qty | Critical? | Notes |
-| --- | --- | --- | --- |
-| EM38 sensor | 1 | Yes | [CONFIRM] |
-| Dual EMS | 1 | Yes | [CONFIRM] |
-| Data logger | 1 | Yes | Charged night before |
-| GNSS receiver | 1 | Yes | [CONFIRM correction source] |
-| Spare battery | 1+ | Yes | Full survey day capacity |
-| Cable set | 1 | Yes | Pack the spare too |
+!!! tip "TIP"
+    Charge the Emlid charger bank and the Getac the night before. Field techs lose
+    more survey time to flat batteries than to anything else.

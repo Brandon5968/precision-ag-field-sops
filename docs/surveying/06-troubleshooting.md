@@ -1,32 +1,34 @@
 ---
 title: Troubleshooting
 ---
-
 # Troubleshooting
 
-Fast field fixes for the most common problems. Find the symptom, work the likely causes top to bottom. If none resolve it, go to Support.
+Quick fixes for the faults that stop a survey. This table is **seeded from the
+verification cues in the guide** — it will grow as we hit (and solve) more in the
+field.
 
-!!! note "At a glance"
-    Work the table top-down — causes are ordered most-likely first.
+!!! info "AT A GLANCE"
+    Most field faults are a **COM port**, a **cable**, or a **power** problem. Work
+    those three first.
 
-## Common faults
+## Symptom → likely cause → fix
 
 | Symptom | Likely cause | Fix |
 | --- | --- | --- |
-| No power to sensor/logger | Battery flat / loose connector | Check battery charge, reseat power connectors, try spare battery |
-| No GPS fix | Antenna obstructed / no correction | Clear sky view, check antenna cable, [CONFIRM correction source] |
-| Sensor reads zero / flatline | Cable fault / sensor not initialised | Reseat data cable, power-cycle sensor, recalibrate |
-| Erratic / spiky readings | Metal interference / loose mount | Increase distance from metal, check mount is tight |
-| Logger not recording | Logging not started / storage full | Confirm logging is active, check free storage |
-| Data won't export | Job not closed / format wrong | Close job first, re-check export format/steps |
+| No **`$PDLS1`** value, or it isn't updating 5×/sec | Wrong COM port, or cable issue | **Wireless** = COM Port 20. **Wired** = find the port in Device Manager. Reseat the cable and power-cycle the DualEM. |
+| GPS not found on scan | Receiver not powered or not connected | Check the Emlid receiver has power and the cable is seated, then re-scan. |
+| Wired DualEM won't connect | Unknown COM port | Open **Device Manager**, find the DualEM's COM port, set it in the dropdown, then **Connect**. |
+| Boundary won't import | Wrong layer selected | In the Read panel, **deselect Surface**, select **Boundary**, then re-import. |
+| Export not showing in SharePoint | Wrong working folder, or upload still in progress | Confirm you saved into **`PA Survey – General – Deal ID`**; wait a few minutes for the automatic upload. |
+| `[CONFIRM: other common field faults Brandon/techs have hit]` | | |
 
-!!! note "BEFORE YOU CALL"
-    Note the exact error message, what you were doing when it happened, and which steps from this table you've already tried. It makes support five times faster.
+!!! warning "WARNING"
+    Always confirm the **`$PDLS1`** value is updating **five times per second** before
+    you start driving. Surveying with a unit that isn't reading correctly wastes the
+    whole run.
 
-## Field reset sequence
+## Escalation
 
-1. Stop logging and save what you have.
-2. Power-cycle the logger, then the sensor.
-3. Re-confirm power, data and GPS connections.
-4. Recalibrate and run a short test line.
-5. If still faulty, stop and contact Support.
+If you've worked the COM-port / cable / power checks and it still won't go, contact
+**Brandon — 0472 810 174** (see [Support](07-support.md)).
+`[CONFIRM: after-hours and hardware-vs-software escalation path.]`

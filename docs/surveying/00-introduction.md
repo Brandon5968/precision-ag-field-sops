@@ -1,31 +1,35 @@
 ---
 title: Introduction
 ---
-
 # Introduction
 
-This manual is the field reference for running an EM38 + Dual EMS electromagnetic induction survey end to end — from loading the rig to handing off clean, exported data. Use it on the job: every chapter opens with a quick overview, then the detailed steps.
+This guide covers how to set up the **DualEM** and the **T3RRA** application to run
+soil survey jobs in the field. It is for Precision Ag field techs and walks through
+everything from gathering your equipment to exporting your completed survey data.
 
-!!! note "At a glance"
-    EM induction measures apparent soil electrical conductivity (ECa), which we use as a proxy for texture, moisture and salinity variation across a paddock. Higher quality in = higher quality maps out.
+!!! info "AT A GLANCE"
+    Follow these steps and you will know your survey is set up correctly, your GPS and
+    DualEM are connected and reading accurately, and your data is exported and
+    **automatically sent to the GIS team via SharePoint** once the job is done.
 
-## How to use this manual
+## What this manual covers
 
-- Tabs run down the left edge — tap any chapter to jump straight to it.
-- HOME (top-left) returns to the cover; CONTENTS (top-right) returns to the chapter index.
-- Every chapter starts with an overview so you can orient before diving in.
-- Use your PDF reader's search (magnifying glass) to find any term, part number or error message.
+This is the field reference for running a DualEM survey with T3RRA Survey (v2.279) on
+the Getac, end to end:
 
-!!! tip "FIRST TIME?"
-    Read Introduction → Equipment Needed → the setup chapter for your vehicle in full before your first solo survey. After that, the Equipment Needed checklist and Troubleshooting table are the pages you'll actually live in.
+1. Gathering and checking your equipment.
+2. Setting up the rig on the Polaris or ute.
+3. Setting up and running the survey in T3RRA on the Getac.
+4. Exporting the data and confirming it has reached the GIS team.
 
-## Before you go
+## How to read it
 
-- [ ] Job confirmed in [CONFIRM: Salesforce / scheduling system] and paddock boundary loaded
-- [ ] Weather and ground conditions suitable (see Survey Setup)
-- [ ] Vehicle for this job confirmed (Polaris or Ute)
-- [ ] All gear from the Equipment Needed checklist packed and powered
-- [ ] Landholder access / gate / biosecurity requirements noted
+- Each chapter opens with an **AT A GLANCE** box — the one thing to remember.
+- **Ordered steps** are the click-by-click procedure; follow them in order.
+- Screenshots show exactly what you should see on the Getac at each step.
+- Anything written as `[CONFIRM: …]` is **not yet finalised** — don't guess; check
+  with Brandon first.
 
-!!! warning "VERSION CHECK"
-    Field procedures change as firmware and software update. Check the footer of this page — if the version on your device is older than the one published on [CONFIRM: SharePoint / docs site], grab the latest before heading out.
+!!! note "NOTE"
+    For any support or clarification, contact **Brandon — 0472 810 174**. See the
+    [Support](07-support.md) chapter for escalation.
