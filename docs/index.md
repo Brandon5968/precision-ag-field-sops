@@ -36,6 +36,14 @@ Pick a manual below, or use the search box (top right) to jump straight to any s
 
     [:octicons-arrow-right-24: Open manual](gamma/index.md)
 
+-   :material-tools: __Equipment & Repairs__
+
+    ---
+
+    Mechanical field maintenance — Polaris, generator, power & cabling, survey rig — and the field-fix / home-fix / stop-and-call decision.
+
+    [:octicons-arrow-right-24: Open manual](equipment/index.md)
+
 </div>
 
 !!! info "How these manuals work"

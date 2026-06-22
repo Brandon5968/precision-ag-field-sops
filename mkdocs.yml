@@ -100,6 +100,16 @@ nav:
       - carbon/index.md
   - Gamma:
       - gamma/index.md
+  - Equipment & Repairs:
+      - equipment/index.md
+      - Introduction: equipment/00-introduction.md
+      - Your field kit: equipment/01-field-kit.md
+      - Polaris: equipment/02-polaris.md
+      - Generator: equipment/03-generator-cord.md
+      - Power & cabling: equipment/04-power-and-cabling.md
+      - Survey rig (mechanical): equipment/05-survey-rig-mechanical.md
+      - Troubleshooting: equipment/06-troubleshooting.md
+      - Support: equipment/07-support.md
   - Tech Hygiene:
       - tech-hygiene/index.md
       - Getting started: tech-hygiene/00-getting-started.md

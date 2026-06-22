@@ -37,6 +37,30 @@ Keep it minimal. Do not add `date:` — it's automatic.
 ```
 Indent the body text **4 spaces** under the `!!!` line.
 
+## Repair cards (Equipment & Repairs and any maintenance book)
+A **repair card** is one fault, always in this fixed order:
+
+1. `### Symptom: …`
+2. **Fix-type badge** — exactly ONE of these (reuse the callout colours, no CSS):
+   ```
+   !!! tip "FIELD FIX"        ← green: safe on site AND the part/tool is in the kit
+   !!! warning "HOME FIX"     ← amber: needs a part/tool not carried, or a workshop
+   !!! danger "STOP & CALL"   ← red: safety risk (fuel/12V/spring/load) or report-first
+   ```
+3. **Tools & parts** — tickable list, linked to the kit chapter (`01-field-kit.md`).
+4. `!!! danger "SWMS"` — mandatory on every card.
+5. **Steps** — every step `[CONFIRM: …]` until the person who does the job verifies it.
+6. **If this doesn't work** — escalation, linked to `07-support.md`.
+
+Copy `templates/repair-card-template.md` for each new card. Never write a mechanical step
+as fact. The kit rule is the spine: **if the part/tool isn't in the kit, it's a home fix.**
+
+## Adding a book = nav line(s) **and** a home card
+When you add a book, do BOTH in the same change, or the card/nav order silently drifts:
+1. Add the book's pages under `nav:` in `mkdocs.yml` (see rule 3 above).
+2. Add a `grid cards` entry for the book in `docs/index.md` (copy an existing card).
+`--strict` catches an orphan page; it does **not** catch a missing home card.
+
 ## Checklists and steps
 - Checklist (tickable): `- [ ] item`
 - Ordered steps: `1. step` (let Markdown auto-number; always start at 1.)
