@@ -6,20 +6,20 @@ title: Support
 Who to call when equipment fails and the card says home fix or stop & call.
 
 !!! warning "DRAFT — pending sign-off"
-    Contacts and hours are `[CONFIRM]` until confirmed.
+    Steps and fix types are `[CONFIRM]` until confirmed; the contact below is correct.
 
 !!! info "AT A GLANCE"
-    Match the problem to the right contact below. Have the gear details and what you've
-    tried ready before you call.
+    For anything in this manual, contact **Brandon on 0472 810 174**. Have the gear
+    details and what you've tried ready before you call.
 
 ## Who to call
 
-| Problem | Contact | Hours |
-| --- | --- | --- |
-| Tech / software / this site | Brandon — `[CONFIRM: preferred contact: email or shared line]` | `[CONFIRM]` |
-| Equipment / mechanical | Dave — `[CONFIRM: contact]` | `[CONFIRM]` |
-| GIS / data | `[CONFIRM: GIS contact email]` | `[CONFIRM]` |
-| General / anything else | Office — `[CONFIRM: main office number]` | `[CONFIRM: open hours]` |
+- **Brandon, 0472 810 174.** First and only point of contact for any equipment fault —
+  Polaris, generator, power & cabling, or the survey rig. He'll route it from there.
+
+`[CONFIRM: if contacts are ever split later — e.g. Dave for equipment, the office number
+during open hours, a GIS email for data — add them here. For now Brandon is the single
+point of contact.]`
 
 ## Before you call
 
