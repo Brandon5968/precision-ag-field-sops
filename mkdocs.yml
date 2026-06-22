@@ -53,6 +53,7 @@ plugins:
   - search
   - git-revision-date-localized:
       enable_creation_date: true
+      enable_git_follow: false       # silences a follow-quirk warning on new pages
       type: date
       fallback_to_build_date: true   # won't crash if git history is missing
 
@@ -99,3 +100,13 @@ nav:
       - carbon/index.md
   - Gamma:
       - gamma/index.md
+  - Tech Hygiene:
+      - tech-hygiene/index.md
+      - Getting started: tech-hygiene/00-getting-started.md
+      - Your devices: tech-hygiene/01-devices.md
+      - Zebra ET45: tech-hygiene/02-zebra-et45.md
+      - Getac laptop: tech-hygiene/03-getac.md
+      - Windows basics: tech-hygiene/04-windows-basics.md
+      - Staying connected: tech-hygiene/05-connectivity.md
+      - When things go wrong: tech-hygiene/06-when-things-go-wrong.md
+      - Glossary: tech-hygiene/07-glossary.md
